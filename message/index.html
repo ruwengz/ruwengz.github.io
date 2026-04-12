@@ -164,161 +164,67 @@
 <!-- 默认页面样式 -->
 <div class="page-content">
   <h1 id="留言板"><a href="#留言板" class="headerlink" title="留言板"></a>留言板</h1><p>有什么想说的吗？在这里留下你的足迹吧！</p>
-<!-- 留言表单 -->
 <div class="message-board">
   <form id="messageForm" action="https://formspree.io/f/xnqevwzr" method="POST">
     <div class="form-group">
       <label for="name">昵称 *</label>
       <input type="text" id="name" name="name" required placeholder="怎么称呼你？">
     </div>
-    
-<pre><code>&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label for=&quot;email&quot;&gt;邮箱&lt;/label&gt;
-  &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;your@email.com（不会公开）&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label for=&quot;website&quot;&gt;网站&lt;/label&gt;
-  &lt;input type=&quot;url&quot; id=&quot;website&quot; name=&quot;website&quot; placeholder=&quot;https://your-website.com（可选）&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label for=&quot;message&quot;&gt;留言内容 *&lt;/label&gt;
-  &lt;textarea id=&quot;message&quot; name=&quot;message&quot; rows=&quot;5&quot; required placeholder=&quot;写下你想说的话...&quot;&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-
-&lt;button type=&quot;submit&quot; class=&quot;submit-btn&quot;&gt;
-  &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
-    &lt;line x1=&quot;22&quot; y1=&quot;2&quot; x2=&quot;11&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;
-    &lt;polygon points=&quot;22 2 15 22 11 13 2 9 22 2&quot;&gt;&lt;/polygon&gt;
-  &lt;/svg&gt;
-  提交留言
-&lt;/button&gt;
-</code></pre>
+    <div class="form-group">
+      <label for="email">邮箱</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com（不会公开）">
+    </div>
+    <div class="form-group">
+      <label for="website">网站</label>
+      <input type="url" id="website" name="website" placeholder="https://your-website.com（可选）">
+    </div>
+    <div class="form-group">
+      <label for="message">留言内容 *</label>
+      <textarea id="message" name="message" rows="5" required placeholder="写下你想说的话..."></textarea>
+    </div>
+    <button type="submit" class="submit-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+      提交留言
+    </button>
   </form>
-  
   <div id="formStatus" class="form-status"></div>
 </div>
 
 <style>
-.message-board {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 30px;
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  border: 2px dashed var(--border);
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border: 2px dashed var(--border);
-  border-radius: var(--radius-md);
-  background: var(--background);
-  color: var(--text);
-  font-size: 15px;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.submit-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 14px 24px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(110, 206, 218, 0.3);
-}
-
-.submit-btn svg {
-  width: 18px;
-  height: 18px;
-}
-
-.submit-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.form-status {
-  margin-top: 20px;
-  padding: 16px;
-  border-radius: var(--radius-md);
-  text-align: center;
-  display: none;
-}
-
-.form-status.success {
-  display: block;
-  background: rgba(160, 231, 160, 0.2);
-  border: 2px dashed #a0e7a0;
-  color: #2d7a2d;
-}
-
-.form-status.error {
-  display: block;
-  background: rgba(255, 175, 204, 0.2);
-  border: 2px dashed #ffafcc;
-  color: #c44d7a;
-}
+.message-board { max-width: 600px; margin: 0 auto; padding: 30px; background: var(--card-bg); border-radius: var(--radius-lg); border: 2px dashed var(--border); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--text); }
+.form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 2px dashed var(--border); border-radius: var(--radius-md); background: var(--background); color: var(--text); font-size: 15px; transition: all 0.3s ease; box-sizing: border-box; }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.submit-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px 24px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border: none; border-radius: var(--radius-md); font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(110, 206, 218, 0.3); }
+.submit-btn svg { width: 18px; height: 18px; }
+.submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.form-status { margin-top: 20px; padding: 16px; border-radius: var(--radius-md); text-align: center; display: none; }
+.form-status.success { display: block; background: rgba(160, 231, 160, 0.2); border: 2px dashed #a0e7a0; color: #2d7a2d; }
+.form-status.error { display: block; background: rgba(255, 175, 204, 0.2); border: 2px dashed #ffafcc; color: #c44d7a; }
 </style>
 
 <script>
-  const form = document.getElementById('messageForm');
-  const status = document.getElementById('formStatus');
-  const submitBtn = form.querySelector('.submit-btn');
+(function() {
+  var form = document.getElementById('messageForm');
+  var status = document.getElementById('formStatus');
+  var submitBtn = form.querySelector('.submit-btn');
   
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
-    
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> 提交中...';
     
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
       if (response.ok) {
         status.className = 'form-status success';
         status.textContent = '留言提交成功！感谢你的留言 ❤️';
@@ -326,14 +232,15 @@
       } else {
         throw new Error('提交失败');
       }
-    } catch (error) {
+    }).catch(function(error) {
       status.className = 'form-status error';
       status.textContent = '提交失败，请稍后重试或检查网络连接';
-    } finally {
+    }).finally(function() {
       submitBtn.disabled = false;
       submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> 提交留言';
-    }
+    });
   });
+})();
 </script>
 
 <hr>
@@ -454,127 +361,19 @@
             
               <div class="contribution-week">
                 
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
                   <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-0"></div>
-                
                   <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-3"></div>
                 
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
                   <div class="contribution-day level-1"></div>
                 
                   <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
                 
               </div>
             
@@ -584,69 +383,15 @@
                 
                   <div class="contribution-day level-2"></div>
                 
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
                   <div class="contribution-day level-0"></div>
                 
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
                   <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
-                  <div class="contribution-day level-3"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-1"></div>
-                
                   <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
                 
               </div>
             
@@ -654,31 +399,13 @@
                 
                   <div class="contribution-day level-0"></div>
                 
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-1"></div>
+                  <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
                   <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-1"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
@@ -694,11 +421,11 @@
                 
                   <div class="contribution-day level-1"></div>
                 
-                  <div class="contribution-day level-3"></div>
-                
                   <div class="contribution-day level-2"></div>
                 
-                  <div class="contribution-day level-1"></div>
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
@@ -708,13 +435,31 @@
                 
                   <div class="contribution-day level-3"></div>
                 
-                  <div class="contribution-day level-1"></div>
+                  <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
-                  <div class="contribution-day level-0"></div>
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
@@ -726,15 +471,15 @@
                 
                   <div class="contribution-day level-3"></div>
                 
+                  <div class="contribution-day level-1"></div>
+                
                   <div class="contribution-day level-3"></div>
                 
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
+                  <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-3"></div>
                 
@@ -742,13 +487,49 @@
             
               <div class="contribution-week">
                 
-                  <div class="contribution-day level-3"></div>
+                  <div class="contribution-day level-0"></div>
                 
-                  <div class="contribution-day level-3"></div>
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-1"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
@@ -768,7 +549,7 @@
                 
                   <div class="contribution-day level-1"></div>
                 
-                  <div class="contribution-day level-3"></div>
+                  <div class="contribution-day level-1"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
@@ -778,25 +559,9 @@
             
               <div class="contribution-week">
                 
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
                   <div class="contribution-day level-3"></div>
                 
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-2"></div>
+                  <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-3"></div>
                 
@@ -804,11 +569,153 @@
                 
                   <div class="contribution-day level-1"></div>
                 
-                  <div class="contribution-day level-2"></div>
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-3"></div>
                 
               </div>
             
