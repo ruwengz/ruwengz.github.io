@@ -161,60 +161,174 @@
     <section class="main-content">
       <!-- 页面模板 - 根据页面类型渲染不同样式 -->
 
-<!-- 默认页面样式 -->
-<div class="page-content">
-  <h1 id="技术专题"><a href="#技术专题" class="headerlink" title="技术专题"></a>技术专题</h1><p>系统化的学习路径，完整的实战系列</p>
-<h2 id="专题列表"><a href="#专题列表" class="headerlink" title="专题列表"></a>专题列表</h2><table>
-<thead>
-<tr>
-<th>专题名称</th>
-<th>难度</th>
-<th>文章数</th>
-<th>预计时长</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>React 18 完全指南</td>
-<td>进阶</td>
-<td>12篇</td>
-<td>约6小时</td>
-</tr>
-<tr>
-<td>TypeScript 类型体操</td>
-<td>高级</td>
-<td>8篇</td>
-<td>约4小时</td>
-</tr>
-<tr>
-<td>Node.js 进阶之路</td>
-<td>进阶</td>
-<td>10篇</td>
-<td>约5小时</td>
-</tr>
-<tr>
-<td>AI 与机器学习实战</td>
-<td>入门</td>
-<td>15篇</td>
-<td>约8小时</td>
-</tr>
-<tr>
-<td>Vue 3 核心解析</td>
-<td>进阶</td>
-<td>9篇</td>
-<td>约4.5小时</td>
-</tr>
-<tr>
-<td>Docker 与容器化部署</td>
-<td>入门</td>
-<td>7篇</td>
-<td>约3.5小时</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>更多专题持续更新中…</p>
-</blockquote>
+<!-- 专题页面 -->
+<div class="topics-page">
+  <!-- Hero 区域 -->
+  <section class="topics-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">技术专题</h1>
+      <p class="hero-subtitle">系统化的学习路径，完整的实战系列</p>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-number">6</span><span class="stat-label">个专题</span></div>
+        <div class="stat-item"><span class="stat-number">61</span><span class="stat-label">篇文章</span></div>
+        <div class="stat-item"><span class="stat-number">31</span><span class="stat-label">小时内容</span></div>
+      </div>
+    </div>
+    <div class="hero-decoration">
+      <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="2" stroke-dasharray="10 5" opacity="0.3"/><circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="2" opacity="0.2"/><circle cx="100" cy="100" r="40" fill="currentColor" opacity="0.1"/></svg>
+    </div>
+  </section>
 
+  <!-- 筛选栏 -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="beginner">入门</button>
+    <button class="filter-btn" data-filter="intermediate">进阶</button>
+    <button class="filter-btn" data-filter="advanced">高级</button>
+  </div>
+
+  <!-- 专题卡片网格 -->
+  <div class="topics-grid">
+    <article class="topic-card" data-level="intermediate">
+      <div class="card-header" style="background: linear-gradient(135deg, #61DAFB, #282C34);">
+        <span class="topic-icon">⚛️</span>
+        <span class="level-badge intermediate">进阶</span>
+      </div>
+      <div class="card-body">
+        <h3 class="topic-title">React 18 完全指南</h3>
+        <p class="topic-desc">深入理解 React 18 新特性，掌握并发模式、自动批处理等核心概念</p>
+        <div class="topic-tags"><span class="tag">Hooks</span><span class="tag">并发模式</span><span class="tag">性能优化</span></div>
+        <div class="topic-meta"><span>12 篇文章</span><span>约 6 小时</span></div>
+      </div>
+      <div class="card-footer"><span class="update-badge">持续更新</span><a href="#" class="enter-btn">进入专题 →</a></div>
+    </article>
+
+    <article class="topic-card" data-level="advanced">
+      <div class="card-header" style="background: linear-gradient(135deg, #3178C6, #235A97);">
+        <span class="topic-icon">📘</span>
+        <span class="level-badge advanced">高级</span>
+      </div>
+      <div class="card-body">
+        <h3 class="topic-title">TypeScript 类型体操</h3>
+        <p class="topic-desc">从基础类型到高级类型编程，彻底掌握 TypeScript 类型系统</p>
+        <div class="topic-tags"><span class="tag">泛型</span><span class="tag">类型推断</span><span class="tag">条件类型</span></div>
+        <div class="topic-meta"><span>8 篇文章</span><span>约 4 小时</span></div>
+      </div>
+      <div class="card-footer"><span class="update-badge">持续更新</span><a href="#" class="enter-btn">进入专题 →</a></div>
+    </article>
+
+    <article class="topic-card" data-level="intermediate">
+      <div class="card-header" style="background: linear-gradient(135deg, #68A063, #3C873A);">
+        <span class="topic-icon">🟢</span>
+        <span class="level-badge intermediate">进阶</span>
+      </div>
+      <div class="card-body">
+        <h3 class="topic-title">Node.js 进阶之路</h3>
+        <p class="topic-desc">Event Loop、Stream、Cluster 等核心模块深度解析</p>
+        <div class="topic-tags"><span class="tag">事件循环</span><span class="tag">Stream</span><span class="tag">性能调优</span></div>
+        <div class="topic-meta"><span>10 篇文章</span><span>约 5 小时</span></div>
+      </div>
+      <div class="card-footer"><span class="update-badge">持续更新</span><a href="#" class="enter-btn">进入专题 →</a></div>
+    </article>
+
+    <article class="topic-card" data-level="beginner">
+      <div class="card-header" style="background: linear-gradient(135deg, #FF6B6B, #C44D7A);">
+        <span class="topic-icon">🤖</span>
+        <span class="level-badge beginner">入门</span>
+      </div>
+      <div class="card-body">
+        <h3 class="topic-title">AI 与机器学习实战</h3>
+        <p class="topic-desc">从零开始学习 AI，掌握主流框架和实际应用场景</p>
+        <div class="topic-tags"><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">LLM</span></div>
+        <div class="topic-meta"><span>15 篇文章</span><span>约 8 小时</span></div>
+      </div>
+      <div class="card-footer"><span class="update-badge hot">🔥 热门</span><a href="#" class="enter-btn">进入专题 →</a></div>
+    </article>
+
+    <article class="topic-card" data-level="intermediate">
+      <div class="card-header" style="background: linear-gradient(135deg, #4FC08D, #35495E);">
+        <span class="topic-icon">💚</span>
+        <span class="level-badge intermediate">进阶</span>
+      </div>
+      <div class="card-body">
+        <h3 class="topic-title">Vue 3 核心解析</h3>
+        <p class="topic-desc">Composition API、响应式原理、性能优化全解析</p>
+        <div class="topic-tags"><span class="tag">Composition API</span><span class="tag">响应式</span><span class="tag">Vite</span></div>
+        <div class="topic-meta"><span>9 篇文章</span><span>约 4.5 小时</span></div>
+      </div>
+      <div class="card-footer"><span class="update-badge">持续更新</span><a href="#" class="enter-btn">进入专题 →</a></div>
+    </article>
+
+    <article class="topic-card" data-level="beginner">
+      <div class="card-header" style="background: linear-gradient(135deg, #2496ED, #1D63ED);">
+        <span class="topic-icon">🐳</span>
+        <span class="level-badge beginner">入门</span>
+      </div>
+      <div class="card-body">
+        <h3 class="topic-title">Docker 与容器化部署</h3>
+        <p class="topic-desc">掌握容器技术，实现应用的快速部署和扩展</p>
+        <div class="topic-tags"><span class="tag">Dockerfile</span><span class="tag">K8s</span><span class="tag">CI/CD</span></div>
+        <div class="topic-meta"><span>7 篇文章</span><span>约 3.5 小时</span></div>
+      </div>
+      <div class="card-footer"><span class="update-badge">持续更新</span><a href="#" class="enter-btn">进入专题 →</a></div>
+    </article>
+  </div>
+
+  <!-- 学习路径推荐 -->
+  <section class="learning-paths">
+    <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>推荐学习路径</h2>
+    <div class="paths-grid">
+      <div class="path-card">
+        <div class="path-header"><span class="path-number">01</span><h3>前端工程师</h3></div>
+        <div class="path-steps"><span class="step">Vue 3 核心解析</span><span class="arrow">→</span><span class="step">React 18 完全指南</span><span class="arrow">→</span><span class="step">TypeScript 类型体操</span></div>
+        <p class="path-desc">从 Vue 入门，掌握 React，最后用 TypeScript 提升代码质量</p>
+      </div>
+      <div class="path-card">
+        <div class="path-header"><span class="path-number">02</span><h3>全栈开发者</h3></div>
+        <div class="path-steps"><span class="step">Node.js 进阶之路</span><span class="arrow">→</span><span class="step">Docker 与容器化部署</span><span class="arrow">→</span><span class="step">TypeScript 类型体操</span></div>
+        <p class="path-desc">夯实后端基础，掌握容器化部署，提升类型安全</p>
+      </div>
+      <div class="path-card">
+        <div class="path-header"><span class="path-number">03</span><h3>AI 应用开发</h3></div>
+        <div class="path-steps"><span class="step">AI 与机器学习实战</span><span class="arrow">→</span><span class="step">Python 基础</span><span class="arrow">→</span><span class="step">LLM 应用开发</span></div>
+        <p class="path-desc">从 AI 入门到实战应用，掌握大语言模型开发技能</p>
+      </div>
+    </div>
+  </section>
 </div>
+
+<script>
+(function() {
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var topicCards = document.querySelectorAll('.topic-card');
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var filter = this.dataset.filter;
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      topicCards.forEach(function(card) {
+        if (filter === 'all' || card.dataset.level === filter) {
+          card.style.display = 'block';
+          setTimeout(function() { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 10);
+        } else {
+          card.style.opacity = '0'; card.style.transform = 'translateY(20px)';
+          setTimeout(function() { card.style.display = 'none'; }, 300);
+        }
+      });
+    });
+  });
+  topicCards.forEach(function(card, index) {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'all 0.5s ease';
+    setTimeout(function() {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, index * 100);
+  });
+})();
+</script>
+
 
 
 <style>
@@ -300,6 +414,56 @@
 .footer-decoration svg { width: 40px; height: 40px; color: var(--text-light); opacity: 0.3; margin-bottom: 16px; }
 .moments-footer p { color: var(--text-light); font-size: 16px; }
 @media (max-width: 768px) { .moments-header { padding: 40px 20px; } .moments-title { font-size: 32px; } .moments-timeline { padding-left: 20px; } .timeline-line { left: 5px; } .moment-card::before { left: -13px; width: 10px; height: 10px; } .moment-date { position: static; text-align: left; margin-bottom: 12px; display: flex; gap: 8px; align-items: baseline; } .moment-content { padding: 20px; } .moment-title { padding-right: 50px; } }
+
+/* 专题页面样式 */
+.topics-page { max-width: 1200px; margin: 0 auto; }
+.topics-hero { background: var(--card-bg); border-radius: var(--radius-lg); border: 2px dashed var(--border); padding: 60px; margin-bottom: 40px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; }
+.hero-content { position: relative; z-index: 1; }
+.hero-title { font-family: var(--font-display); font-size: 48px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-light); margin-bottom: 30px; }
+.hero-stats { display: flex; gap: 40px; }
+.hero-stats .stat-item { display: flex; flex-direction: column; }
+.hero-stats .stat-number { font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--primary); }
+.hero-stats .stat-label { font-size: 14px; color: var(--text-light); }
+.hero-decoration { position: absolute; right: 60px; top: 50%; transform: translateY(-50%); width: 200px; height: 200px; color: var(--primary); animation: rotate 20s linear infinite; }
+@keyframes rotate { from { transform: translateY(-50%) rotate(0deg); } to { transform: translateY(-50%) rotate(360deg); } }
+.filter-bar { display: flex; gap: 12px; margin-bottom: 30px; flex-wrap: wrap; }
+.filter-btn { padding: 10px 24px; background: var(--card-bg); border: 2px dashed var(--border); border-radius: var(--radius-md); color: var(--text); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; }
+.filter-btn:hover, .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+.topics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 24px; margin-bottom: 50px; }
+.topic-card { background: var(--card-bg); border-radius: var(--radius-lg); border: 2px dashed var(--border); overflow: hidden; transition: all 0.3s ease; }
+.topic-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); border-color: var(--primary); }
+.card-header { padding: 24px; display: flex; align-items: center; justify-content: space-between; position: relative; }
+.topic-icon { font-size: 40px; }
+.level-badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; color: white; }
+.level-badge.beginner { background: rgba(160, 231, 160, 0.9); color: #2d5a2d; }
+.level-badge.intermediate { background: rgba(255, 217, 61, 0.9); color: #8b6914; }
+.level-badge.advanced { background: rgba(255, 175, 204, 0.9); color: #8b1c3f; }
+.card-body { padding: 24px; }
+.topic-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 12px; }
+.topic-desc { font-size: 14px; color: var(--text-light); margin-bottom: 16px; line-height: 1.6; }
+.topic-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.tag { padding: 4px 10px; background: rgba(110, 206, 218, 0.15); color: var(--primary); border-radius: 12px; font-size: 12px; }
+.topic-meta { display: flex; gap: 16px; font-size: 13px; color: var(--text-light); }
+.card-footer { padding: 16px 24px; border-top: 1px dashed var(--border); display: flex; align-items: center; justify-content: space-between; }
+.update-badge { padding: 4px 10px; background: rgba(160, 231, 160, 0.2); color: #2d7a2d; border-radius: 12px; font-size: 12px; }
+.update-badge.hot { background: rgba(255, 107, 107, 0.2); color: #c44d4d; }
+.enter-btn { color: var(--primary); font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
+.enter-btn:hover { transform: translateX(4px); }
+.learning-paths { margin-top: 50px; }
+.learning-paths .section-title { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 28px; font-weight: 600; color: var(--text); margin-bottom: 30px; }
+.learning-paths .section-title svg { width: 32px; height: 32px; color: var(--primary); }
+.paths-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.path-card { background: var(--card-bg); border-radius: var(--radius-lg); border: 2px dashed var(--border); padding: 30px; transition: all 0.3s ease; }
+.path-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+.path-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.path-number { width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; }
+.path-header h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text); }
+.path-steps { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px; }
+.step { padding: 6px 12px; background: var(--background); border-radius: var(--radius-sm); font-size: 13px; color: var(--text); }
+.arrow { color: var(--primary); font-weight: bold; }
+.path-desc { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+@media (max-width: 768px) { .topics-hero { padding: 40px 20px; flex-direction: column; text-align: center; } .hero-title { font-size: 32px; } .hero-decoration { display: none; } .hero-stats { justify-content: center; } .topics-grid { grid-template-columns: 1fr; } .filter-bar { justify-content: center; } }
 </style>
 
     </section>
@@ -323,17 +487,35 @@
             
               <div class="contribution-week">
                 
-                  <div class="contribution-day level-1"></div>
+                  <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-3"></div>
                 
-                  <div class="contribution-day level-0"></div>
-                
                   <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
                   <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
@@ -343,87 +525,15 @@
                 
                   <div class="contribution-day level-1"></div>
                 
-                  <div class="contribution-day level-3"></div>
+                  <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-0"></div>
-                
                   <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
@@ -433,11 +543,11 @@
                 
                   <div class="contribution-day level-2"></div>
                 
+                  <div class="contribution-day level-1"></div>
+                
                   <div class="contribution-day level-2"></div>
                 
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-1"></div>
+                  <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
@@ -449,135 +559,9 @@
             
               <div class="contribution-week">
                 
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
                   <div class="contribution-day level-1"></div>
                 
                   <div class="contribution-day level-3"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-2"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
-              </div>
-            
-              <div class="contribution-week">
-                
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-2"></div>
                 
@@ -587,7 +571,7 @@
                 
                   <div class="contribution-day level-1"></div>
                 
-                  <div class="contribution-day level-3"></div>
+                  <div class="contribution-day level-1"></div>
                 
               </div>
             
@@ -597,9 +581,27 @@
                 
                   <div class="contribution-day level-3"></div>
                 
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
                   <div class="contribution-day level-0"></div>
                 
-                  <div class="contribution-day level-3"></div>
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
                 
                   <div class="contribution-day level-0"></div>
                 
@@ -612,6 +614,60 @@
               <div class="contribution-week">
                 
                   <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
@@ -629,7 +685,25 @@
             
               <div class="contribution-week">
                 
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
                   <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
@@ -637,9 +711,45 @@
                 
                   <div class="contribution-day level-1"></div>
                 
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
                   <div class="contribution-day level-3"></div>
                 
                   <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-1"></div>
                 
@@ -649,17 +759,17 @@
                 
                   <div class="contribution-day level-1"></div>
                 
-                  <div class="contribution-day level-3"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-1"></div>
-                
-                  <div class="contribution-day level-0"></div>
-                
                   <div class="contribution-day level-2"></div>
                 
                   <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-0"></div>
                 
               </div>
             
@@ -667,9 +777,11 @@
                 
                   <div class="contribution-day level-3"></div>
                 
-                  <div class="contribution-day level-1"></div>
+                  <div class="contribution-day level-3"></div>
                 
-                  <div class="contribution-day level-2"></div>
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-0"></div>
                 
                   <div class="contribution-day level-3"></div>
                 
@@ -677,7 +789,59 @@
                 
                   <div class="contribution-day level-0"></div>
                 
+              </div>
+            
+              <div class="contribution-week">
+                
                   <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+              </div>
+            
+              <div class="contribution-week">
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-0"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-2"></div>
+                
+                  <div class="contribution-day level-1"></div>
+                
+                  <div class="contribution-day level-3"></div>
+                
+                  <div class="contribution-day level-1"></div>
                 
               </div>
             
