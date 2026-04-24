@@ -636,6 +636,25 @@ body {
   height: fit-content;
 }
 
+/* 广告区域 */
+.ad-section {
+  text-align: center;
+}
+
+.ad-section .adsbygoogle {
+  border-radius: var(--radius-md);
+  min-height: 250px;
+  background: linear-gradient(135deg, rgba(110, 206, 218, 0.05), rgba(199, 125, 255, 0.05));
+}
+
+.ad-section .sidebar-title {
+  margin-bottom: 12px;
+}
+
+.ad-section .sidebar-title svg {
+  color: var(--accent);
+}
+
 .contribution-card {
   background: var(--card-bg);
   border-radius: var(--radius-md);
